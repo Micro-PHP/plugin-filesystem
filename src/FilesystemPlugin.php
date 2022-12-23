@@ -3,7 +3,9 @@
 namespace Micro\Plugin\Filesystem;
 
 use Micro\Component\DependencyInjection\Container;
-use Micro\Framework\Kernel\Plugin\AbstractPlugin;
+use Micro\Framework\Kernel\Plugin\ConfigurableInterface;
+use Micro\Framework\Kernel\Plugin\DependencyProviderInterface;
+use Micro\Framework\Kernel\Plugin\PluginConfigurationTrait;
 use Micro\Plugin\Filesystem\Configuration\FilesystemPluginConfigurationInterface;
 use Micro\Plugin\Filesystem\Facade\FilesystemFacade;
 use Micro\Plugin\Filesystem\Facade\FilesystemFacadeInterface;
@@ -11,8 +13,10 @@ use Micro\Plugin\Filesystem\Facade\FilesystemFacadeInterface;
 /**
  * @method FilesystemPluginConfigurationInterface configuration()
  */
-class FilesystemPlugin extends AbstractPlugin
+class FilesystemPlugin implements DependencyProviderInterface, ConfigurableInterface
 {
+    use PluginConfigurationTrait;
+
     /**
      * {@inheritDoc}
      */

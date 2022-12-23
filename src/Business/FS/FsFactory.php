@@ -7,6 +7,9 @@ use League\Flysystem\FilesystemOperator;
 use Micro\Plugin\Filesystem\Business\Adapter\AdapterFactoryInterface;
 use Micro\Plugin\Filesystem\Configuration\FilesystemPluginConfigurationInterface;
 
+/**
+ * @author Stanislau Komar <head.trackingsoft@gmail.com>
+ */
 class FsFactory implements FsFactoryInterface
 {
     /**
@@ -31,7 +34,7 @@ class FsFactory implements FsFactoryInterface
         $options = [];
         $publicUrl = $adapterConfiguration->getPublicUrl();
         if($publicUrl) {
-            $options[] = $publicUrl;
+            $options['public_url'] = $publicUrl;
         }
 
         return new Filesystem($adapter, $options);

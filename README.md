@@ -46,7 +46,40 @@ MICRO_FS_DEFAULT_KEY_SECRET=${AWS_S3_KEY_SECRET}
 MICRO_FS_DEFAULT_PUBLIC_URL=http://filestorage:9000/${MICRO_FS_DEFAULT_BUCKET}
 ```
 
+## Usage
 
+Import the filesystem facade to get the file system operator.
+
+#### Example
+
+Service locator:
+```php
+
+use Micro\Plugin\Filesystem\Facade\FilesystemFacadeInterface;
+
+$container->get(FilesystemFacadeInterface::class)->createFsOperator();
+```
+
+Dependency Injection
+
+```php
+
+use Micro\Framework\Kernel\Plugin\DependencyProviderInterface;
+use Micro\Component\DependencyInjection\Container;
+use Micro\Plugin\Filesystem\Facade\FilesystemFacadeInterface;
+
+class ExamplePlugin implements DependencyProviderInterface
+{
+    public function provideDependencies(Container $container) : void{
+        $container->register(ExampleFacade::class, function(
+            FilesystemFacadeInterface::class $filesystemFacade
+        ) {
+            return ....;
+        });
+    }
+}
+
+```
 
 
 

@@ -1,5 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
+/*
+ *  This file is part of the Micro framework package.
+ *
+ *  (c) Stanislau Komar <kost@micro-php.net>
+ *
+ *  For the full copyright and license information, please view the LICENSE
+ *  file that was distributed with this source code.
+ */
+
 namespace Micro\Plugin\Filesystem;
 
 use Micro\Component\DependencyInjection\Container;
@@ -22,7 +33,7 @@ class FilesystemPlugin implements DependencyProviderInterface, ConfigurableInter
      */
     public function provideDependencies(Container $container): void
     {
-        $container->register(FilesystemFacadeInterface::class, fn() => $this->createFacade());
+        $container->register(FilesystemFacadeInterface::class, fn (): FilesystemFacadeInterface => $this->createFacade());
     }
 
     /**
@@ -33,4 +44,3 @@ class FilesystemPlugin implements DependencyProviderInterface, ConfigurableInter
         return new FilesystemFacade();
     }
 }
-

@@ -11,7 +11,7 @@ declare(strict_types=1);
  *  file that was distributed with this source code.
  */
 
-namespace Micro\Plugin\Filesystem\Test\Unit\Facade;
+namespace Micro\Plugin\Filesystem\Tests\Unit\Facade;
 
 use Micro\Plugin\Filesystem\Facade\FilesystemFacade;
 use PHPUnit\Framework\TestCase;

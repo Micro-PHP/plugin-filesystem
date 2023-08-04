@@ -11,9 +11,9 @@ declare(strict_types=1);
  *  file that was distributed with this source code.
  */
 
-namespace Micro\Plugin\Filesystem\Test\Unit\Configuration\Adapter;
+namespace Micro\Plugin\Filesystem\Tests\Unit\Configuration\Adapter;
 
-use Micro\Framework\Kernel\Configuration\ApplicationConfigurationInterface;
+use Micro\Framework\BootConfiguration\Configuration\ApplicationConfigurationInterface;
 use Micro\Plugin\Filesystem\Configuration\Adapter\AbstractFilesystemAdapterConfiguration;
 use Micro\Plugin\Filesystem\Configuration\Adapter\FilesystemAdapterConfigurationInterface;
 use PHPUnit\Framework\TestCase;

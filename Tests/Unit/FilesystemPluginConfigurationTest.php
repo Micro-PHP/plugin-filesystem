@@ -11,11 +11,11 @@ declare(strict_types=1);
  *  file that was distributed with this source code.
  */
 
-namespace Micro\Plugin\Filesystem\Test\Unit;
+namespace Micro\Plugin\Filesystem\Tests\Unit;
 
-use Micro\Framework\Kernel\Configuration\ApplicationConfigurationInterface;
-use Micro\Framework\Kernel\Configuration\Exception\InvalidConfigurationException;
-use Micro\Framework\Kernel\Configuration\PluginRoutingKeyConfiguration;
+use Micro\Framework\BootConfiguration\Configuration\ApplicationConfigurationInterface;
+use Micro\Framework\BootConfiguration\Configuration\Exception\InvalidConfigurationException;
+use Micro\Framework\BootConfiguration\Configuration\PluginRoutingKeyConfiguration;
 use Micro\Plugin\Filesystem\Configuration\Adapter\FilesystemAdapterConfigurationInterface;
 use Micro\Plugin\Filesystem\Configuration\FilesystemPluginConfigurationInterface;
 use Micro\Plugin\Filesystem\FilesystemPluginConfiguration;

@@ -11,7 +11,7 @@ declare(strict_types=1);
  *  file that was distributed with this source code.
  */
 
-namespace Micro\Plugin\Filesystem\Test\Unit\Business\FS;
+namespace Micro\Plugin\Filesystem\Tests\Unit\Business\FS;
 
 use League\Flysystem\FilesystemAdapter;
 use League\Flysystem\FilesystemOperator;

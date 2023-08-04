@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace Micro\Plugin\Filesystem;
 
-use Micro\Framework\Kernel\Configuration\Exception\InvalidConfigurationException;
-use Micro\Framework\Kernel\Configuration\PluginConfiguration;
+use Micro\Framework\BootConfiguration\Configuration\Exception\InvalidConfigurationException;
+use Micro\Framework\BootConfiguration\Configuration\PluginConfiguration;
 use Micro\Plugin\Filesystem\Configuration\Adapter\FilesystemAdapterConfigurationInterface;
 use Micro\Plugin\Filesystem\Configuration\FilesystemPluginConfigurationInterface;
 

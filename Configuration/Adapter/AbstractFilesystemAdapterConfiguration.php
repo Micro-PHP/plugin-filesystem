@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Micro\Plugin\Filesystem\Configuration\Adapter;
 
-use Micro\Framework\Kernel\Configuration\PluginRoutingKeyConfiguration;
+use Micro\Framework\BootConfiguration\Configuration\PluginRoutingKeyConfiguration;
 
 class AbstractFilesystemAdapterConfiguration extends PluginRoutingKeyConfiguration implements FilesystemAdapterConfigurationInterface
 {

@@ -11,9 +11,9 @@ declare(strict_types=1);
  *  file that was distributed with this source code.
  */
 
-namespace Micro\Plugin\Filesystem\Test\Unit;
+namespace Micro\Plugin\Filesystem\Tests\Unit;
 
-use Micro\Kernel\App\AppKernel;
+use Micro\Framework\KernelApp\AppKernel;
 use Micro\Plugin\Filesystem\Facade\FilesystemFacadeInterface;
 use Micro\Plugin\Filesystem\FilesystemPlugin;
 use PHPUnit\Framework\TestCase;

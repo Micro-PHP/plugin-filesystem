@@ -28,9 +28,6 @@ class FilesystemPlugin implements DependencyProviderInterface, ConfigurableInter
 {
     use PluginConfigurationTrait;
 
-    /**
-     * {@inheritDoc}
-     */
     public function provideDependencies(Container $container): void
     {
         $container->register(FilesystemFacadeInterface::class, fn (): FilesystemFacadeInterface => $this->createFacade());
